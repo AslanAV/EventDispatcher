@@ -15,7 +15,7 @@ if (file_exists($autoloadPath1)) {
 }
 
 
-$event = prompt("what Event you Want");
+$event = prompt("What Event you Want");
 $eventDispatcher = new StartED($event);
 echo ($eventDispatcher->welcome());
 
