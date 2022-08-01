@@ -1,21 +1,32 @@
 <?php
 
-namespace App\Dispatcher;
+namespace App;
 
-
-use App\Subscribers\Subscribers;
+use Exception;
 
 class Dispatcher
 {
-    private string $newEvent;
+    protected string $dirEvents = __DIR__ . "/../Events/";
+    private string $event;
 
     public function __construct(string $newEvent)
     {
-        $this->newEvent = $newEvent;
+        $this->event = $newEvent;
     }
 
-    public function DispatchSubsribers(): array
+
+    public function setStatusOpen(): void
     {
-        return (new Subscribers())->getListeners($this->newEvent);
+        $content = '';
+        try {
+            $content = json_encode(['name' => $this->event, 'status' => 'open'], JSON_THROW_ON_ERROR);
+        } catch (Exception $e) {
+            $log = new Log($e);
+            $log->addToLog("Запись в лог: Warning!!! Event status open\n");
+        }
+
+        $date = date('Y-m-d H:i:s');
+        $nameFile = "{$this->dirEvents}{$this->event}_{$date}";
+        file_put_contents($nameFile, $content);
     }
 }

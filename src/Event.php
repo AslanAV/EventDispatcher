@@ -1,7 +1,6 @@
 <?php
 
-namespace App\Event;
-
+namespace App;
 
 class Event
 {
@@ -16,8 +15,4 @@ class Event
     {
         return $this->event;
     }
-
-
-
-
 }
