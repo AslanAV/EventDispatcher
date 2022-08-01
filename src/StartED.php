@@ -38,15 +38,20 @@ class StartED
         while (true) {
             $allStatus = $subscribers->checkOpenEvents();
             sleep(3);
-            $count = 0;
-            foreach ($allStatus as $status) {
-                if ($status === 'close') {
-                    $count++;
-                }
-            }
-            if ($count === count($allStatus)) {
+            if ($this->checkAllStatusDone($allStatus)) {
                 return;
             }
         }
+    }
+
+    private function checkAllStatusDone($allStatus): bool
+    {
+        $count = 0;
+        foreach ($allStatus as $status) {
+            if ($status === 'close') {
+                $count++;
+            }
+        }
+        return $count === count($allStatus);
     }
 }

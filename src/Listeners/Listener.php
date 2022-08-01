@@ -2,8 +2,6 @@
 
 namespace App\Listeners;
 
-use Exception;
-
 class Listener
 {
     private int $property;
