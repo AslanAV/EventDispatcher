@@ -13,4 +13,4 @@ $ make install
 ```shell
 $ ./bin/ED
 ```
-[![asciicast](https://asciinema.org/a/DlfoxSHZx4QSKJeyVuDz7RtFH.svg)](https://asciinema.org/a/DlfoxSHZx4QSKJeyVuDz7RtFH)
+[![asciicast](https://asciinema.org/a/KbBaovl1PgljE9QiIoTYxnPzv.svg)](https://asciinema.org/a/KbBaovl1PgljE9QiIoTYxnPzv)
