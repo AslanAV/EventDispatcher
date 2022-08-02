@@ -9,8 +9,26 @@ $ make install
 ```
 
 
-### Use Event Dispatcher
+### Start Event Dispatcher
 ```shell
 $ ./bin/ED
 ```
-[![asciicast](https://asciinema.org/a/KbBaovl1PgljE9QiIoTYxnPzv.svg)](https://asciinema.org/a/KbBaovl1PgljE9QiIoTYxnPzv)
+
+
+### Create New Event
+```shell
+$ ./bin/ED
+```
+```shell
+$ e
+```
+[![asciicast](https://asciinema.org/a/vjk0X9sKLWFhQ2m8eR1iBtewy.svg)](https://asciinema.org/a/vjk0X9sKLWFhQ2m8eR1iBtewy)
+
+### Start listen Events
+```shell
+$ ./bin/ED
+```
+```shell
+$ s
+```
+[![asciicast](https://asciinema.org/a/Y58duHfisKlI8DdtQZCa9ut0K.svg)](https://asciinema.org/a/Y58duHfisKlI8DdtQZCa9ut0K)
