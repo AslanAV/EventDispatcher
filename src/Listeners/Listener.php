@@ -14,10 +14,14 @@ class Listener
 
     public function getResult(string $newEvent): string
     {
+        $this->doJobs();
         if (random_int(0, 1) === 1) {
             sleep($this->property);
             return 'Done!';
         }
         return 'Not Done!';
     }
+
+
+
 }

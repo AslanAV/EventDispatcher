@@ -3,6 +3,8 @@
 namespace App;
 
 use App\Listeners\Listener;
+use App\Listeners\SendEmail;
+use App\Listeners\SendSMS;
 
 class Subscribers
 {
@@ -13,10 +15,10 @@ class Subscribers
     public function __construct()
     {
         $this->listeners = [
-            new Listener(),
-            new Listener(),
-            new Listener(),
-            new Listener(),
+            new SendEmail(),
+            new SendSMS(),
+//            new Listener(),
+//            new Listener(),
         ];
     }
 
